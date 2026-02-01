@@ -1,0 +1,13 @@
+<div class="mb-3">
+    <ng-template #subtitle>
+      <span class="text-sm text-500">Post #{{ post()?.id }}</span>
+    </ng-template>
+  <p-card styleClass="h-full">
+      <ng-template #title>
+        <div class="text-base sm:text-lg font-semibold line-height-3">
+          {{ post()?.title }}
+        </div>
+      </ng-template>
+      <p class="text-sm sm:text-base text-justify line-height-3 m-0">{{ post()?.body }}</p>
+  </p-card>
+</div>

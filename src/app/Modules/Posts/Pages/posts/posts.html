@@ -1,0 +1,13 @@
+<div class="posts-container p-3">
+  @if (isLoading()) {
+    <app-loader/>
+  } @else {
+    <div class="grid">
+      @for (post of posts(); track post.id) {
+        <div class="col-12 sm:col-6 lg:col-4 xl:col-3">
+          <app-post-card [post]="post"/>
+        </div>
+      }
+    </div>
+  }
+</div>
