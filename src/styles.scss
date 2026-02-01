@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'app/Styles/fonts';
+@import 'primeflex/primeflex.scss';
+@import 'primeicons/primeicons.css';
+
+body {
+    font-family: "Inter", sans-serif;
+    min-height: 100dvh;
+}
