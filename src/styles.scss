@@ -1,6 +1,6 @@
 @use 'app/Styles/fonts';
-@import 'primeflex/primeflex.scss';
-@import 'primeicons/primeicons.css';
+@use 'primeflex/primeflex.scss';
+@use 'primeicons/primeicons.css';
 
 body {
     font-family: "Inter", sans-serif;

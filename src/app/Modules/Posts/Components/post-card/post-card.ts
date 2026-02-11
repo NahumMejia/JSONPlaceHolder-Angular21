@@ -1,6 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Card } from "primeng/card";
 import { Post } from '../../Interfaces/post.interface';
+import { PostsService } from '../../Services/posts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-card',
@@ -9,5 +11,14 @@ import { Post } from '../../Interfaces/post.interface';
   styleUrl: './post-card.scss',
 })
 export class PostCard {
-  public post = input<Post>()
+  public post = input<Post>();
+  private readonly postsService = inject(PostsService);
+  private readonly router = inject(Router);
+
+  navigateToComments() {
+    const postId = this.post()?.id;
+    if (postId){
+      this.router.navigate(['/posts', postId, 'comments']);
+    }    
+  }
 }

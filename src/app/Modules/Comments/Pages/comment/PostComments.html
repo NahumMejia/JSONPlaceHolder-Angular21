@@ -1,0 +1,23 @@
+<div class="comments-container p-3">
+  <h1>Comments of Post #{{ postId() }}</h1>
+
+  @if (isLoading()) {
+    <app-loader/>
+  } @else {
+
+    @if (comments().length === 0) {
+      <p>There's no comments for this posts.</p>
+    } @else {
+
+      <div class="grid">
+        @for (comment of comments(); track comment.id) {
+          <div class="col-12 sm:col-6 lg:col-4">
+            <app-comment-card [comment]="comment"/>
+          </div>
+        }
+      </div>
+
+    }
+
+  }
+</div>

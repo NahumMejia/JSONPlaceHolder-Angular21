@@ -4,7 +4,7 @@ import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
 })
