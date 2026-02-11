@@ -1,0 +1,45 @@
+.comments-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.comments-header {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+  }
+
+  .subtitle {
+    color: #6b7280;
+    font-size: .95rem;
+  }
+}
+
+.comments-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.empty-state {
+  border: 1px dashed #e5e7eb;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  color: #6b7280;
+
+  i {
+    display: block;
+    margin-bottom: 1rem;
+    color: #9ca3af;
+  }
+}

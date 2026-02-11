@@ -1,13 +1,20 @@
-<div class="posts-container p-3">
+<div class="posts-wrapper">
+  <div class="posts-header">
+    <h2>Posts</h2>
+    <p class="subtitle">A collection of public posts from JSONPlaceholder</p>
+  </div>
+
   @if (isLoading()) {
-    <app-loader/>
+    <div class="loader-container">
+      <app-loader/>
+    </div>
   } @else {
-    <div class="grid">
+
+    <div class="posts-grid">
       @for (post of posts(); track post.id) {
-        <div class="col-12 sm:col-6 lg:col-4 xl:col-3">
-          <app-post-card [post]="post"/>
-        </div>
+        <app-post-card [post]="post"/>
       }
     </div>
+
   }
 </div>

@@ -1,23 +1,17 @@
-<div class="mb-3">
-  <ng-template #subtitle>
-    <span class="text-sm text-500">Post #{{ post()?.id }}</span>
-  </ng-template>
-  
-  <p-card class="h-full">
-    <ng-template #title>
-      <div class="text-base sm:text-lg font-semibold line-height-3">
-        {{ post()?.title }}
-      </div>
-    </ng-template>
-    
-    <p class="text-sm sm:text-base text-justify line-height-3 mt-4">
-      {{ post()?.body }}
-    </p>
-    
-    <a 
-      class="text underline cursor-pointer" 
-      (click)="navigateToComments()">
-      Open Comments
-    </a>
-  </p-card>
+<div class="post-card" (click)="navigateToComments()">
+  <div class="post-meta">
+    Post #{{ post()?.id }}
+  </div>
+
+  <h3 class="post-title">
+    {{ post()?.title }}
+  </h3>
+
+  <p class="post-body">
+    {{ post()?.body }}
+  </p>
+
+  <div class="post-footer">
+    <span>View comments →</span>
+  </div>
 </div>

@@ -9,7 +9,7 @@ import { PostComment } from '../../Interfaces/comment.interface';
 @Component({
   selector: 'app-comment',
   standalone: true,
-  imports: [Loader, CommentCard, PostCard],
+  imports: [Loader, CommentCard],
   templateUrl: './PostComments.html',
   styleUrl: './PostComments.scss',
 })

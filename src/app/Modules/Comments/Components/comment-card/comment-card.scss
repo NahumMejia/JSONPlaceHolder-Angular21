@@ -1,0 +1,55 @@
+.comment-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all .2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.comment-user {
+  h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: .85rem;
+    color: #6b7280;
+  }
+}
+
+.comment-body {
+  font-size: .9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-top: .5rem;
+}

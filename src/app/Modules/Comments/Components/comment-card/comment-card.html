@@ -1,5 +1,16 @@
-<div class="p-3 border-round surface-card mb-3">
-  <h3>{{ comment().name }}</h3>
-  <p class="text-sm text-500">{{ comment().email }}</p>
-  <p class="mt-2">{{ comment().body }}</p>
+<div class="comment-card">
+  <div class="comment-header">
+    <div class="avatar">
+      {{ comment().name.charAt(0) }}
+    </div>
+
+    <div class="comment-user">
+      <h4>{{ comment().name }}</h4>
+      <span>{{ comment().email }}</span>
+    </div>
+  </div>
+
+  <p class="comment-body">
+    {{ comment().body }}
+  </p>
 </div>
