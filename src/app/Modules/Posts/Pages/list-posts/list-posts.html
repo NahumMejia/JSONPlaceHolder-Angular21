@@ -1,0 +1,25 @@
+<p-toast position="top-right" />
+
+<div class="posts-wrapper">
+  <div class="posts-header flex justify-content-between align-items-center">
+    <div>
+      <h2 class="m-0">Posts</h2>
+      <p class="subtitle m-0">
+        A collection of public posts from JSONPlaceholder
+      </p>
+    </div>
+    <p-button (click)="navigateToPost()" label="Post"/>
+  </div>
+
+  @if (isLoading()) {
+    <div class="loader-container">
+      <app-loader/>
+    </div>
+  } @else {
+    <div class="posts-grid">
+      @for (post of posts(); track post.id) {
+        <app-post-card [post]="post"/>
+      }
+    </div>
+  }
+</div>

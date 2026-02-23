@@ -29,3 +29,15 @@
   justify-content: center;
   padding: 3rem 0;
 }
+
+:host ::ng-deep .p-button {
+  border-radius: 16px;
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+:host ::ng-deep .p-button:hover {
+  background-color:darkgrey;
+  border-color: white;
+}

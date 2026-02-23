@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { PostComment } from '../../Interfaces/comment.interface';
+import { PostComment } from '../Interfaces/comment.interface';
 
 @Component({
   selector: 'app-comment-card',

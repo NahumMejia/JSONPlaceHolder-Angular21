@@ -1,0 +1,17 @@
+:host ::ng-deep {
+  .p-button:not(.p-button-outlined) {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+
+    &:hover:not(:disabled) {
+      background: #222222 !important;
+      border-color: #222222 !important;
+    }
+
+    &:active {
+      background: #444444 !important;
+      border-color: #444444 !important;
+    }
+  }
+}

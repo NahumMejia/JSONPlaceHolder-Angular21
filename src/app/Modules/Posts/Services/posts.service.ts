@@ -19,4 +19,8 @@ export class PostsService {
   getCommentsByPost(postId: number): Observable<PostComment[]> {
     return this.http.get<PostComment[]>(`${this.URL}/posts/${postId}/comments`);
   }
+  
+  createPost(post: Omit<Post, 'id'>): Observable<Post> {
+    return this.http.post<Post>(`${this.URL}/posts`, post);
+  }
 }

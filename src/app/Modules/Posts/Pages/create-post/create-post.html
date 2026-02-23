@@ -1,0 +1,66 @@
+<div class="flex align-items-center justify-content-center min-h-screen bg-gray-50">
+  <p-card class="w-full md:w-6 lg:w-4 shadow-3">
+
+    <ng-template pTemplate="header">
+      <div class="flex flex-column align-items-center gap-2 pt-4 px-4">
+        <i class="pi pi-file-edit" style="font-size: 2.5rem; color: #000000"></i>
+        <h1 class="text-3xl font-bold m-0">Create Post</h1>
+        <p class="text-color-secondary m-0">Fill in the details to publish a new post.</p>
+      </div>
+    </ng-template>
+
+    <div class="flex flex-column gap-4 px-2">
+
+      <!-- Title -->
+      <div class="flex flex-column gap-2">
+        <label for="title" class="font-semibold">Title</label>
+        <input
+          pInputText
+          id="title"
+          [value]="title()"
+          (input)="setTitle($any($event.target).value)"
+          placeholder="Enter post title"
+          class="w-full"
+        />
+      </div>
+
+      <!-- Body -->
+      <div class="flex flex-column gap-2">
+        <label for="body" class="font-semibold">Body</label>
+        <textarea
+          pTextarea
+          id="body"
+          [value]="body()"
+          (input)="setBody($any($event.target).value)"
+          placeholder="Write your post content here..."
+          rows="6"
+          class="w-full"
+          autoResize="true"
+        ></textarea>
+      </div>
+
+    </div>
+
+    <ng-template pTemplate="footer">
+      <div class="flex justify-content-between align-items-center gap-2 px-2">
+        <p-button
+          label="Cancel"
+          severity="secondary"
+          variant="outlined"
+          routerLink="/"
+          icon="pi pi-arrow-left"
+          [disabled]="loading()"
+        />
+        <p-button
+          label="Publish Post"
+          icon="pi pi-send"
+          iconPos="right"
+          [disabled]="!isValid() || loading()"
+          [loading]="loading()"
+          (onClick)="submit()"
+        />
+      </div>
+    </ng-template>
+
+  </p-card>
+</div>

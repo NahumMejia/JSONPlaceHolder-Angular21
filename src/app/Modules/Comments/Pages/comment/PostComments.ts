@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CommentCard } from '../../Components/comment-card/comment-card';
+import { CommentCard } from '../../Components/comment-card';
 import { Loader } from '../../../Core/Components/loader/loader';
 import { PostsService } from '../../../Posts/Services/posts.service';
 import { PostCard } from "../../../Posts/Components/post-card/post-card";

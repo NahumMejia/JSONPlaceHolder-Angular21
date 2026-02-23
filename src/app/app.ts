@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Loader } from './Modules/Core/Components/loader/loader';
-import { NavBar } from "./Modules/Core/Components/nav-bar/nav-bar";
+import { ToastModule } from 'primeng/toast';
+import { NavBar } from './Modules/Core/Components/nav-bar/nav-bar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBar],
+  imports: [RouterOutlet, NavBar, ToastModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-
-}
+export class App {}
